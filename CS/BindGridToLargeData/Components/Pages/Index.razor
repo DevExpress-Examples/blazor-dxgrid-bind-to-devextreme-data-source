@@ -1,0 +1,34 @@
+﻿@page "/"
+@using Microsoft.EntityFrameworkCore
+@using BindGridToLargeData.Models;
+@using DevExpress.Data.Linq
+@inject IDbContextFactory<NorthwindContext> NorthwindContextFactory
+@implements IDisposable
+@rendermode InteractiveServer
+
+<div>
+    <DxGrid Data="GridDataSource" VirtualScrollingEnabled="true" TextWrapEnabled="false" CssClass="my-grid">
+        <Columns>
+            <DxGridDataColumn FieldName="ShipName" />
+            <DxGridDataColumn FieldName="ShipCity" />
+            <DxGridDataColumn FieldName="ShipCountry" />
+            <DxGridDataColumn FieldName="Freight" />
+            <DxGridDataColumn FieldName="OrderDate" />
+            <DxGridDataColumn FieldName="ShippedDate" />
+        </Columns>
+    </DxGrid>
+</div>
+
+@code {
+    object GridDataSource { get; set; }
+    NorthwindContext Northwind { get; set; }
+
+    protected override void OnInitialized() {
+        Northwind = NorthwindContextFactory.CreateDbContext();
+        GridDataSource = new GridDevExtremeDataSource<Order>(Northwind.Orders);
+    }
+
+    public void Dispose() {
+        Northwind?.Dispose();
+    }
+}
