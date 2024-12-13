@@ -3,31 +3,38 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# Product/Platform - Task
+# Grid for Blazor - How to bind the component to DevExtreme data source with Entity Framework Core
 
-This is the repository template for creating new examples. Describe the solved task here.
+This example uses [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/) data access technology to bind the [DevExpress Blazor Grid](https://docs.devexpress.com/Blazor/403143/components/grid) component to a [GridDevExtremeDataSource<T>](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridDevExtremeDataSource-1).
 
-Put a screenshot that illustrates the result here.
+![Bind the Grid to a DevExtreme Data Source](bind-to-devextreme-data-source.png)
 
-Then, add implementation details (steps, code snippets, and other technical information in a free form), or add a link to an existing document with implementation details. 
+You can use the [GridDevExtremeDataSource<T>](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridDevExtremeDataSource-1) class to bind the DevExpress Blazor Grid to a large [IQueryable<T>](https://learn.microsoft.com/en-us/dotnet/api/system.linq.iqueryable-1) data collection. This data source implementation is based on our [DevExtreme.AspNet.Data](https://github.com/DevExpress/DevExtreme.AspNet.Data) library. When you use this data source, the Grid delegates data filtering operations to an underlying query provider (such as [EF Core](https://learn.microsoft.com/en-us/ef/core/)) and only loads data required for screen display. This technique optimizes performance and reduces overall memory consumption.
+
+To use this data source in your next Blazor project, create a [GridDevExtremeDataSource<T>](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridDevExtremeDataSource-1) class instance and pass your [IQueryable<T>](https://learn.microsoft.com/en-us/dotnet/api/system.linq.iqueryable-1) data collection as the constructor parameter. Once complete, assign this instance to the Grid's Data property.
+
+Refer to the following help topic for more information about this data source, its specifics, and limitations: [Bind Blazor Grid to Data](https://docs.devexpress.com/Blazor/403737/components/grid/bind-to-data#large-data-queryable-collections).
 
 ## Files to Review
 
-- link.cs (VB: link.vb)
-- link.js
-- ...
+- [Index.razor](./CS/BindGridToLargeData/Components/Pages/Index.razor)
+- [Index.razor.css](./CS/BindGridToLargeData/Components/Pages/Index.razor.css)
+- [Invoice.cs](./CS/BindGridToLargeData/Models/Invoice.cs)
+- [NorthwindContext.cs](./CS/BindGridToLargeData/Models/NorthwindContext.cs)
+- [Program.cs](./CS/BindGridToLargeData/Program.cs)
 
 ## Documentation
 
-- link
-- link
-- ...
+- [Bind Blazor Grid to Data](https://docs.devexpress.com/Blazor/403737/components/grid/bind-to-data)
+- [Bind Components to Data with Entity Framework Core](https://docs.devexpress.com/Blazor/403167/common-concepts/data-binding/bind-components-to-data-with-entity-framework-core)
 
 ## More Examples
 
-- link
-- link
-- ...
+- [How to bind the Grid to a DataTable object](https://github.com/DevExpress-Examples/blazor-grid-bind-to-datatable-object)
+- [How to bind the Grid to data with Entity Framework Core](https://github.com/DevExpress-Examples/blazor-dxgrid-bind-to-data-with-entity-framework-core)
+- [How to bind the Grid to an Instant Feedback data source and enable edit operations](https://github.com/DevExpress-Examples/blazor-dxgrid-bind-to-instant-feedback-data-source)
+- [How to bind the Grid to a Web API service](https://github.com/DevExpress-Examples/blazor-DxGrid-Bind-To-Web-Api-Service)
+
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 
