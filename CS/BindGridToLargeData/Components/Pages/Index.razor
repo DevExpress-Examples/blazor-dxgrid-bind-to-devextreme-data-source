@@ -7,12 +7,15 @@
 @rendermode InteractiveServer
 
 <div>
-    <DxGrid Data="GridDataSource" VirtualScrollingEnabled="true" TextWrapEnabled="false" CssClass="my-grid">
+    <DxGrid Data="GridDataSource" 
+            TextWrapEnabled="false"
+            VirtualScrollingEnabled="true"
+            FilterMenuButtonDisplayMode="GridFilterMenuButtonDisplayMode.Always"
+            CssClass="my-grid">
         <Columns>
             <DxGridDataColumn FieldName="ShipName" />
             <DxGridDataColumn FieldName="ShipCity" />
             <DxGridDataColumn FieldName="ShipCountry" />
-            <DxGridDataColumn FieldName="Freight" />
             <DxGridDataColumn FieldName="OrderDate" />
             <DxGridDataColumn FieldName="ShippedDate" />
         </Columns>

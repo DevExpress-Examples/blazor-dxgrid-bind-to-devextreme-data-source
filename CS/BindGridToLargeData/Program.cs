@@ -1,6 +1,5 @@
 using BindGridToLargeData.Components;
 using BindGridToLargeData.Models;
-using BindGridToLargeData.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,7 +18,6 @@ builder.Services.AddDbContextFactory<NorthwindContext>((sp, options) => {
     var dbPath = Path.Combine(env.ContentRootPath, "Northwind.db");
     options.UseSqlite("Data Source=" + dbPath);
 });
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddMvc();
 
 var app = builder.Build();
