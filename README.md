@@ -4,17 +4,15 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# Grid for Blazor - How to bind the component to a DevExtreme data source with Entity Framework Core
+# Blazor Grid – Binding to a DevExtreme Data Source with Entity Framework Core
 
-This example uses [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/) data access technology to bind the [DevExpress Blazor Grid](https://docs.devexpress.com/Blazor/403143/components/grid) component to a [GridDevExtremeDataSource<T>](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridDevExtremeDataSource-1).
+This example uses [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/) data access technologies to bind the [DevExpress Blazor Grid](https://docs.devexpress.com/Blazor/403143/components/grid) component to a [GridDevExtremeDataSource](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridDevExtremeDataSource-1).
 
 ![Bind the Grid to a DevExtreme Data Source](bind-to-devextreme-data-source.png)
 
-You can use the [GridDevExtremeDataSource<T>](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridDevExtremeDataSource-1) class to bind the DevExpress Blazor Grid to a large [IQueryable<T>](https://learn.microsoft.com/en-us/dotnet/api/system.linq.iqueryable-1) data collection. This data source implementation is based on our [DevExtreme.AspNet.Data](https://github.com/DevExpress/DevExtreme.AspNet.Data) library. When you use this data source, the Grid delegates data filtering operations to an underlying query provider (such as [EF Core](https://learn.microsoft.com/en-us/ef/core/)) and only loads data required for screen display. This technique optimizes performance and reduces overall memory consumption.
+You can use the [GridDevExtremeDataSource](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridDevExtremeDataSource-1) class to bind the DevExpress Blazor Grid to a large [IQueryable](https://learn.microsoft.com/en-us/dotnet/api/system.linq.iqueryable-1) data collection. This data source implementation is built upon our [DevExtreme.AspNet.Data](https://github.com/DevExpress/DevExtreme.AspNet.Data) library. When you use this data source, our Blazor Grid delegates data filtering operations to an underlying query provider (such as [EF Core](https://learn.microsoft.com/en-us/ef/core/)) and only loads data required for on-screen display (helps optimize app performance and reduces overall memory consumption).
 
-To use this data source in your next Blazor project, create a [GridDevExtremeDataSource<T>](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridDevExtremeDataSource-1) class instance and pass your [IQueryable<T>](https://learn.microsoft.com/en-us/dotnet/api/system.linq.iqueryable-1) data collection as the constructor parameter. Once complete, assign this instance to the Grid's Data property.
-
-Refer to the following help topic for more information about this data source, its specifics, and limitations: [Bind Blazor Grid to Data](https://docs.devexpress.com/Blazor/403737/components/grid/bind-to-data#large-data-queryable-collections).
+To use this data source in your next Blazor project, create a [GridDevExtremeDataSource](https://docs.devexpress.com/Blazor/DevExpress.Blazor.GridDevExtremeDataSource-1) class instance and pass your [IQueryable](https://learn.microsoft.com/en-us/dotnet/api/system.linq.iqueryable-1) data collection as the constructor parameter. Once complete, assign this instance to the Grid's Data property. Refer to the following help topic for additional information/technical guidance: [Bind Blazor Grid to Data](https://docs.devexpress.com/Blazor/403737/components/grid/bind-to-data#large-data-queryable-collections).
 
 ## Files to Review
 
