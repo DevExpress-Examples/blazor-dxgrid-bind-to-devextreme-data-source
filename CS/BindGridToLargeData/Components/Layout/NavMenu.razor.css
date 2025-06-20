@@ -1,4 +1,4 @@
-﻿﻿#sidebar {
+﻿#sidebar {
     min-width: 15rem;
     max-width: 15rem;
     transition: transform 0.1s ease-out;
@@ -21,6 +21,10 @@
 }
 
 ::deep .menu {
+    --dxbl-menu-bottom-left-border-radius: 0;
+    --dxbl-menu-bottom-right-border-radius: 0;
+    --dxbl-menu-top-left-border-radius: 0;
+    --dxbl-menu-top-right-border-radius: 0;
     background-color: inherit;
 }
 
@@ -29,43 +33,39 @@
     }
 
 ::deep .menu-item {
-    color: var(--bs-white);
+    color: var(--bs-white, #fff);
 }
 
 ::deep .icon {
-    width: 1rem;
-    height: 1rem;
-    background-position: center;
-    background-repeat: no-repeat;
     margin-left: 0.5rem;
 }
 
 ::deep .home-icon {
-    background-image: url("images/home.svg");
+    --icon-mask-image: var(--icon-home-mask-image);
 }
 
 ::deep .weather-icon {
-    background-image: url("images/weather.svg");
+    --icon-mask-image: var(--icon-weather-mask-image);
 }
 
 ::deep .counter-icon {
-    background-image: url("images/counter.svg");
+    --icon-mask-image: var(--icon-counter-mask-image);
 }
 
 ::deep .settings-icon {
-    background-image: url("images/account/settings.svg");
+    --icon-mask-image: var(--icon-settings-mask-image);
 }
 
 ::deep .log-in-icon {
-    background-image: url("images/account/log-in.svg");
+    --icon-mask-image: var(--icon-log-in-mask-image);
 }
 
 ::deep .log-out-icon {
-    background-image: url("images/account/log-out.svg");
+    --icon-mask-image: var(--icon-log-out-mask-image);
 }
 
 ::deep .user-icon {
-    background-image: url("images/account/user.svg");
+    --icon-mask-image: var(--icon-user-mask-image);
 }
 
 @media (max-width: 768px) {
