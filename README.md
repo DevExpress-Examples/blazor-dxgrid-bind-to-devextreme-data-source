@@ -35,7 +35,7 @@ To use this data source in your next Blazor project, create a [GridDevExtremeDat
 - [How to bind the Grid to a Web API service](https://github.com/DevExpress-Examples/blazor-DxGrid-Bind-To-Web-Api-Service)
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-dxgrid-bind-to-devextreme-data-source&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-dxgrid-bind-to-devextreme-data-source&~~~was_helpful=no)
 
